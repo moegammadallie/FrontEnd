@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class PhysioService {
 
-  private baseURL: string = '//localhost:8080/doctor';
+  private baseURL: string = '//localhost:8080/physio';
   private id:string;
 
   constructor(private http:HttpClient) {}
@@ -20,7 +20,7 @@ export class PhysioService {
   
     const headers = new HttpHeaders({ Authorization: 'Basic ' + btoa(username + ':' + password) });
 
-    return this.http.post<Physiotherapist>(this.baseURL + '/new', doctor, {headers});
+    return this.http.post<Physiotherapist>(this.baseURL + '/create', doctor, {headers});
 
   }
 
@@ -31,7 +31,7 @@ export class PhysioService {
   
     const headers = new HttpHeaders({ Authorization: 'Basic ' + btoa(username + ':' + password) });
 
-    return this.http.get<Physiotherapist>(this.baseURL + '/find/' + id, {headers});
+    return this.http.get<Physiotherapist>(this.baseURL + '/read/' + id, {headers});
   }
 
   updateDoctor(note:Physiotherapist) : Observable<Physiotherapist>{

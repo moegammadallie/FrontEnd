@@ -19,7 +19,7 @@ export class PatientService {
   
     const headers = new HttpHeaders({ Authorization: 'Basic ' + btoa(username + ':' + password) });
 
-    return this.http.post<Patient>(this.baseURL + '/new', patient, {headers});
+    return this.http.post<Patient>(this.baseURL + '/create', patient, {headers});
 
   }
 
@@ -29,7 +29,7 @@ export class PatientService {
   
     const headers = new HttpHeaders({ Authorization: 'Basic ' + btoa(username + ':' + password) });
 
-    return this.http.get<Patient>(this.baseURL + '/find/' + id, {headers});
+    return this.http.get<Patient>(this.baseURL + '/read/' + id, {headers});
   }
 
   updatePatient(patient:Patient) : Observable<Patient>{

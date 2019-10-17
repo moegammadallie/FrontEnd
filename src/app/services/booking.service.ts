@@ -20,7 +20,7 @@ export class BookingService {
     
     const headers = new HttpHeaders({ Authorization: 'Basic ' + btoa(username + ':' + password) });
 
-    return this.http.post<Booking>(this.baseURL + '/new', appointment, {headers});
+    return this.http.post<Booking>(this.baseURL + '/create', appointment, {headers});
 
   }
 
@@ -31,7 +31,7 @@ export class BookingService {
   
     const headers = new HttpHeaders({ Authorization: 'Basic ' + btoa(username + ':' + password) });
 
-    return this.http.get<Booking>(this.baseURL + '/find/' + id, {headers});
+    return this.http.get<Booking>(this.baseURL + '/read/' + id, {headers});
   }
 
   updateAppointment(appointment:Booking) : Observable<Booking>{
