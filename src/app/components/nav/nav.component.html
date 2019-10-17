@@ -1,1 +1,31 @@
-<p>nav works!</p>
+<div class="container-fluid">
+
+    <nav class="navbar navbar-expand-lg  fixed-top" style="background-color: orangered">
+  
+      <a class="navbar-brand" style="color:white">Your Physiotherapist</a>
+  
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" id="toggle">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+  
+          <li class="nav-item active " id="patientsLink">
+            <a class="nav-link"  style="color:black"routerLink="/appointments" (click)="changeLink1()">Bookings</a>
+          </li>
+  
+          <li class="nav-item " id="appoinmentsLink">
+              <a class="nav-link"  style="color:black" routerLink="/physios" (click)="changeLink4()">Physiotherapists</a>
+            </li>
+  
+          <li class="nav-item " id="visitsLink">
+            <a class="nav-link"  style="color:black"routerLink="/patients" (click)="changeLink2()">Patients</a>
+          </li>
+        </ul>
+
+      </div>
+  
+    </nav>
+  </div>
