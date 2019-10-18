@@ -1,7 +1,7 @@
-<div class="container" style="margin-top: 10px">
+<div class="container-fluid" style="margin-top: 10px">
 
     <div class="card-header">
-      <h3>New Doctor</h3>
+      <h3>Create</h3>
     </div>
   
     <div clas="card">
@@ -17,52 +17,18 @@
           <div class="form-group">
             <label for="lastName">Last Name</label>
             <input type="text" id="lastName" #lastName="ngModel" required [(ngModel)]="doctor.lastName" name="lastName" class="form-control" />
-            <div [hidden]="lastName.valid || lastName.pristine" class="alert alert-danger"> Last Name is required </div>
           </div>
   
           <div class="form-group ">
             <label for="jobTitle">Job Title</label>
             <input type="text" id="jobTitle" #jobTitle="ngModel" required [(ngModel)]="doctor.jobTitle" name="jobTitle" class="form-control" />
-            <div [hidden]="jobTitle.valid || jobTitle.pristine" class="alert alert-danger"> Job Title is required </div>
           </div>
   
           <div class="form-group">
             <label for="identityNumber">Identity Number</label>
             <input type="text" id="identityNumber" #identityNumber="ngModel" required [(ngModel)]="doctor.identityNumber" name="identityNumber" class="form-control" />
-            <div [hidden]="identityNumber.valid || identityNumber.pristine" class="alert alert-danger"> Identity Number is required </div>
           </div>
-  
-          <div class="form-group">
-  
-              <label for="employmentDate">Employment Date</label>
-  
-              <div class="input-group">
-  
-  
-                <select class="form-control" #month (change)='getMonth(month.value)'>
-                  <option value="-1">Month</option>
-                  <option *ngFor="let month of months" [value]="month">{{month}}</option>
-                </select>   
-  
-                <select class="form-control" #day (change)='getDay(day.value)'>
-                    <option value="-1">Day</option>
-                    <option  *ngFor="let day of days" [value]="day">{{day}}</option>
-                </select> 
-  
-                <select class="form-control" #year (change)='getYear(year.value)'>
-                    <option value="-1">Year</option>
-                    <option  *ngFor="let year of years" [value]="year">{{year}}</option>
-                </select>   
-  
-              </div>
-  
-          </div>
-  
-          <div class="form-group">
-            <label for="specialisation">Specialisation</label>
-            <input type="text" id="specialisation" #specialisation="ngModel" required [(ngModel)]="doctor.specialisation" name="specialisation" class="form-control" />
-            <div [hidden]="specialisation.valid || specialisation.pristine || specialisation.untouched" class="alert alert-danger"> Specialisation is required </div>
-          </div>
+
   
           <div>
             <button type="submit" class="btn btn-primary col-sm-12 col-md-2" style="margin-right:5px; margin-bottom: 5px"

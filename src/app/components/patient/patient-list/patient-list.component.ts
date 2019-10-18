@@ -32,10 +32,10 @@ export class PatientListComponent implements OnInit {
 
   deletePatient(id:string) {
     this.patientService.deletePatient(id).subscribe(
-
       data => {
        console.log(data);
        this.getPatients();
+       alert('Deleted Patient')
       }
     );
   }
@@ -44,6 +44,7 @@ export class PatientListComponent implements OnInit {
 
     this.router.navigate(['/patients/edit']);
     this.patientService.saveId(id);
+    
 
   }
 

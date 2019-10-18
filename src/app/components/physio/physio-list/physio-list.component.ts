@@ -30,12 +30,13 @@ export class PhysioListComponent implements OnInit {
     });
   }
 
-  deleteNote(id:string) {
+  deleteDoctor(id:string) {
     this.doctorService.deleteDoctor(id).subscribe(
 
       data => {
        console.log(data);
        this.getDoctors();
+       alert('Physiotheraphist Deleted')
       }
     );
   }

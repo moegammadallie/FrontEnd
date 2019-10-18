@@ -1,19 +1,19 @@
 <div class="container-fluid">
 
     <div>
-       <h4 style="float: left; margin-top:10px; margin-bottom:10px;" href="#" >Upcoming Appointments</h4>
+       <h4 style="float: left; margin-top:10px; margin-bottom:10px;" href="#" >Bookings</h4>
    </div>
    <div>
-       <a class="btn btn-dark" style="color: white; float: right; margin-top:10px; margin-bottom:10px;" href="#"
-           routerLink="/appointments/new">Create Appointment</a>
+       <a class="btn btn-primary" style="color: white; float: right; margin-top:10px; margin-bottom:10px;" href="#"
+           routerLink="/appointments/new">Add</a>
    </div>
   
    <table class="table table-striped">
-       <thead class="thead-dark">
+       <thead class="thead-light">
            <tr>
                <th scope="col">Appointment Date</th>
                <th scope="col">Patient Name</th>
-               <!-- <th><i class="fa fa-eye fa-2x"></i></th> -->
+               <!-- <th scope="col">Edit</th> -->
            </tr>
        </thead>
        <tbody *ngFor="let appointment of appointments">
